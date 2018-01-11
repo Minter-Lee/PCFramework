@@ -23,8 +23,7 @@ var WebpackCfg = {
   //插件部分
   plugins: [
     new webpack.ProvidePlugin({
-      'React': 'react',
-      'ReactDom': 'react-dom'
+      'React': 'react'
     })
   ],
   //模块
