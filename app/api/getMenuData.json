@@ -28,7 +28,7 @@
         {   
             "menuId":"d1",
             "menuName":"规则管控",
-            "path":"/detail/"
+            "path":"/dinner/rule"
         },{
             "menuId":"d2",
             "menuName":"审批管理",
