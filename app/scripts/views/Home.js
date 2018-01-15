@@ -16,6 +16,7 @@ export default class HomeView extends Component {
 
     render () {
         const { tableData, tableActions} = this.props;
-        return <HomeTable {...tableData} {...tableActions} />
+        // return <HomeTable {...tableData} {...tableActions} />
+        return <h1>HomeView</h1>
     }
 }

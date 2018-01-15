@@ -1,0 +1,55 @@
+{
+    "data": [
+    {
+        "menuId": 100,
+        "menuName": "主页",
+        "path":"/home/"
+    },{
+        "menuId": 1,
+        "menuName": "企业管理",
+        "items":[
+        {   
+            "menuId":"c1",
+            "menuName":"企业信息",
+            "path":"/detail/"
+        },{
+            "menuId":"c2",
+            "menuName":"充值信息",
+            "path":"/detail/"
+        },{
+            "menuId":"c3",
+            "menuName":"发票管理",
+            "path":"/detail/"
+        }]
+    },{
+        "menuId": 2,
+        "menuName": "用餐管理",
+        "items":[
+        {   
+            "menuId":"d1",
+            "menuName":"规则管控",
+            "path":"/detail/"
+        },{
+            "menuId":"d2",
+            "menuName":"审批管理",
+            "path":"/other/"
+        },{
+            "menuId":"d3",
+            "menuName":"操作日志",
+            "path":"/detail/"
+        }]
+    },{
+        "menuId": 3,
+        "menuName": "数据管理",
+        "items":[
+        {   
+            "menuId":"a1",
+            "menuName":"订单管理",
+            "path":"/detail/"
+        },{
+            "menuId":"a2",
+            "menuName":"用餐统计",
+            "path":"/detail/"
+        }]
+    }]
+}

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Table } from 'antd';
-import HOCLoadingComponent from '../hoc/HOCLoadingComponent';
+import HOCLoadingComponent from '../../hoc/HOCLoadingComponent';
 import PropTypes from 'prop-types';
 import pureRender from 'pure-render-decorator';
 import less from './table.less';
