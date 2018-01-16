@@ -14,7 +14,6 @@ export default class RuleEditView extends Component {
     }
 
     render() {
-        debugger
         const dataSource = [
         {
             key: 1,
@@ -48,7 +47,7 @@ export default class RuleEditView extends Component {
         }
 
         const extraContent = <Button onClick={this.handlerClick}><Icon type='swap' />移入/移出</Button>;
-        
+
         return <div>
             <Card title='规则使用者' extra={extraContent} >
                 <Collapse bordered={false} >

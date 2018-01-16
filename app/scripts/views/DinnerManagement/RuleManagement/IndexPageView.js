@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import { Route } from 'react-router-dom';
-import { RuleListActions } from '../DinnerManagementRedux';
+import { RuleListActions } from '../IndexPageRedux';
 
 import RuleEditView from './RuleEditView';
 import { Button, Card, Icon } from 'antd';
@@ -37,7 +37,6 @@ export default class RuleManagementView extends Component {
                     <p>'something'</p>
                 </Card>
             </section>
-            <Route path='/dinner/rule/edit/:ruleId' component={RuleEditView} />
         </div>
     }
 }

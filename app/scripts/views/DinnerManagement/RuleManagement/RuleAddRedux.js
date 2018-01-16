@@ -1,4 +1,3 @@
-import reducerLoadTmp from '../../../redux/reducerLoadTmp';
 //constants
 const SAVE_DINNER_RULE = 'SAVE_DINNER_RULE',
       SAVE_DINNER_RULE_SUCCESS = 'SAVE_DINNER_RULE_SUCCESS',
@@ -14,8 +13,41 @@ export function saveDinnerRule () {
 }
 
 //reducers
-const DinnerRuleAdd = (state, action) => {
-    return reducerLoadTmp(state, action.type, types);
+const initialState = {
+    payload: {},
+    loading: true,
+    error: false
+}
+const DinnerRuleAdd = (state=initialState, action) => {
+    switch(action.type) {
+        case SAVE_DINNER_RULE: {
+            return {
+                ...state,
+                loading: true,
+                error: false
+            }
+        }
+
+        case SAVE_DINNER_RULE_SUCCESS: {
+            return {
+                ...state,
+                loading: false,
+                error: false,
+                payload: action.payload
+            }
+        }
+
+        case SAVE_DINNER_RULE_ERROR: {
+            return {
+                ...state,
+                loading: false,
+                error: true
+            }
+        }
+
+        default: 
+            return state;
+    }
 }
 
 export default DinnerRuleAdd;
