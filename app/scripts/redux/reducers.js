@@ -1,10 +1,10 @@
-import HomeReducers from '../views/HomeRedux';
-import MainLayoutReducers from '../layout/MainLayoutRedux';
-import DinnerManagementReducers from '../views/DinnerManagement/DinnerManagementRedux';
+import HomeReducers from '../views/Home/IndexPageRedux';
+import SiderReducers from '../views/Sider/IndexPageRedux';
+import DinnerManagementReducers from '../views/DinnerManagement/IndexPageRedux';
 import { combineReducers }  from 'redux';
 
 export default {
     home: HomeReducers,
-    layout: MainLayoutReducers,
+    sider: SiderReducers,
     dinner: DinnerManagementReducers
 }
