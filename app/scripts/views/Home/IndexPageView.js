@@ -2,7 +2,7 @@ import { PureComponent } from 'React';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import HomeTable from './Table';
-import { tableActions } from './HomeRedux';
+import { tableActions } from './IndexPageRedux';
 
 @connect(state => ({
     tableData: state.home.tableData

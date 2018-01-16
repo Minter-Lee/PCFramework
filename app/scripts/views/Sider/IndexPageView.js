@@ -3,6 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 
+import less from './IndexPage.less';
+
 import MenuView from './MenuView';
 import { menuActions } from './IndexPageRedux';
 
@@ -24,6 +26,7 @@ export default class MainLayout extends Component {
         const { menuData, menuActions, push } = this.props;
 
         return <Sider breakpoint="lg" collapsedWidth="0">
+            <div className='sider-menu-logo'></div>
             <MenuView {...menuData} {...menuActions} push={push}/>
         </Sider>
     }

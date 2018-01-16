@@ -13,7 +13,7 @@ export default class MainNavLayout extends Component {
     }
 
     linkToPage({item, key, keyPath}) {
-        this.props.dispatch(push(item.props.path));
+        this.props.push(item.props.path);
     }
 
     componentDidMount() {
