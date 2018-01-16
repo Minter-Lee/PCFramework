@@ -1,9 +1,9 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import { Button, Card, Icon, Collapse, Table, Modal, Transfer } from 'antd';
 
 const Panel = Collapse.Panel;
 
-export default class RuleEditView extends Component {
+export default class RuleEditView extends PureComponent {
     constructor( props, context) {
         super(props, context);
         this.handlerClick = this.handlerClick.bind(this);

@@ -1,4 +1,4 @@
-import { Component } from 'React';
+import { PureComponent } from 'React';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import HomeTable from '../components/Home/Table';
@@ -9,7 +9,7 @@ import { tableActions } from './HomeRedux';
 }), dispatch => ({
     tableActions: bindActionCreators(tableActions, dispatch)       
 }))
-export default class HomeView extends Component {
+export default class HomeView extends PureComponent {
     constructor(props, context) {
         super(props, context);
     }

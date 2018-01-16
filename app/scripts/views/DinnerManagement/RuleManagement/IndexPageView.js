@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
@@ -14,7 +14,7 @@ import { Button, Card, Icon } from 'antd';
     push: bindActionCreators(push,dispatch),
     ruleListActions: bindActionCreators(RuleListActions,dispatch)
 }))
-export default class RuleManagementView extends Component {
+export default class RuleManagementView extends PureComponent {
     constructor(props, context) {
         super(props, context);
         this.handlerClick = this.handlerClick.bind(this);

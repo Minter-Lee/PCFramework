@@ -1,9 +1,8 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import { Table } from 'antd';
 import HOCLoadingComponent from '../../hoc/HOCLoadingComponent';
 import PropTypes from 'prop-types';
-import pureRender from 'pure-render-decorator';
-import less from './table.less';
+import less from './Table.less';
 
 const columns = [{
     title: '姓名',
@@ -27,9 +26,8 @@ const columns = [{
     key:'option'
 }]
 
-@pureRender
 @HOCLoadingComponent
-export default class HomeTable extends Component {
+export default class HomeTable extends PureComponent {
     constructor(props, context) {
         super(props, context);
     }

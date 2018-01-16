@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import tableReducer from '../components/Home/TableRedux';
+import tableReducer from './TableRedux';
 
 /*--Reducers--*/
 export default combineReducers({
@@ -8,4 +8,4 @@ export default combineReducers({
 });
 
 /*--Action--*/
-export * as tableActions from '../components/Home/TableRedux';
+export * as tableActions from './TableRedux';
