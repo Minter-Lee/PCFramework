@@ -26,7 +26,8 @@ export default class MainNavLayout extends Component {
               { pathname } = window.location;
         // 未考虑除主页标签外的一级可点击标签
         let selectedKey = menuId,
-            renderContent = [];
+            renderContent = [],
+            defaultOpenKey = '';
         // 解析菜单数据结构
         data.map((item,index)=> {
             const {items, path} = item,
@@ -35,8 +36,11 @@ export default class MainNavLayout extends Component {
                 renderContent.push(<SubMenu key={item.menuId} title={item.menuName}>{
                     items.map( subItem => {
                         const { menuId, menuName, path } = subItem; 
-                        // 确定选中的标签
-                        selectedKey = (path == pathname) ? menuId : selectedKey;
+                        if(pathname.match(path)) {
+                            // 确定选中的标签
+                            selectedKey = menuId;
+                            defaultOpenKey = item.menuId
+                        }
                         return <Menu.Item key={menuId} path={path}>{menuName}</Menu.Item>
                     })
                 }</SubMenu>)
@@ -53,6 +57,7 @@ export default class MainNavLayout extends Component {
             theme="dark"
             onClick={this.linkToPage}
             defaultSelectedKeys={[selectedKey+'']}
+            defaultOpenKeys={[defaultOpenKey+'']}
             mode="inline"
         >{renderContent}</Menu>
     }
