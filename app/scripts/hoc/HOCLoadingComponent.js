@@ -8,7 +8,8 @@ const HOCLoadingComponent = WrappedComponent =>
     }
 
     render() {
-        const {loading, error, payload} = this.props;3
+        const {loading, error, payload} = this.props;
+        console.info("loading",loading);
         if(error) {
             Modal.error({
                 title: '对不起服务好像出错了！',
@@ -17,9 +18,11 @@ const HOCLoadingComponent = WrappedComponent =>
         }
         if(loading) {
             return <Spin size='large' tip='loading...' style={{    
-                width: '100%',
-                marginTop: '40%'
-            }} />
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%)'
+                    }} />
         }else if(error) {
             return <div>'请求失败！'</div>
         }

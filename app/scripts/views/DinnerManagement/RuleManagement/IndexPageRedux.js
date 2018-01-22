@@ -47,6 +47,7 @@ const DinnerRuleList = (state=initialState, action) => {
                 ...state,
                 loading: false,
                 error: true,
+                payload: action.payload
             }
         }
 
