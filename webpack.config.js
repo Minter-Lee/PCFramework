@@ -1,6 +1,6 @@
 /**
  * webpack配置文件
- * author : lei.li@fenbeitong.com
+ * author :  MinterLee@hotmail.com
  * date : 2017.12.26
 **/
 var webpack = require('webpack');
