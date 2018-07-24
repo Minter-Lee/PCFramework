@@ -11,6 +11,14 @@ export default class OtherView extends PureComponent {
         super(props, context);
     }
     render() {
-        return <h1 style={style}>'OtherView'</h1>
+        return <div>
+            <h1>OtherView </h1>
+            <span onClick={()=> {
+                this.props.history.push('/home/')
+            }} >toHome</span><br />
+            <span onClick={()=> {
+                this.props.history.push('/home/detail')
+            }} >toDetail</span>
+        </div>
     }
 }

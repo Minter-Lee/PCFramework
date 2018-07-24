@@ -17,6 +17,14 @@ export default class HomeView extends PureComponent {
     render () {
         const { tableData, tableActions} = this.props;
         // return <HomeTable {...tableData} {...tableActions} />
-        return <h1>HomeView</h1>
+        return <div>
+            <h1>home</h1>
+            <span onClick={()=> {
+                this.props.history.push('/home/detail/')
+            }} >toDetail</span><br />
+            <span onClick={()=> {
+                this.props.history.push('/other/')
+            }} >toOther</span>
+        </div>;
     }
 }

@@ -11,17 +11,6 @@ import SiderView from '../views/Sider/IndexPageView';
 import { Layout } from 'antd';
 const { Header, Content, Footer } = Layout;
 
-// const routes = () => (
-//     <MainLayout>
-//         <Route exact path='/'component={HomeView} />
-//         <Route path='/home/'component={HomeView} />
-//         <Route path='/other/'component={OtherView} />
-//         <Route exact path='/detail/'component={DetailView} />
-//         <Route exact path='/dinner/rule'component={RuleManagemntView} />
-//         <Route exact path='/dinner/rule/edit/:ruleId' component={RuleEditView} />
-//     </MainLayout>
-// );
-
 const routes = () => (
     <Layout>
         <SiderView />
@@ -31,11 +20,9 @@ const routes = () => (
             <Route exact path='/'component={HomeView} />
             <Route path='/home/'component={HomeView} />
             <Route path='/other/'component={OtherView} />
-            <Route exact path='/detail/'component={DetailView} />
-            <Route exact path='/dinner/rule'component={RuleManagemntView} />
-            <Route exact path='/dinner/rule/edit/:ruleId' component={RuleEditView} />
+            <Route path='/home/detail/'component={DetailView} />
         </Content>
-        <Footer>© 2018 **********</Footer>
+        <Footer>© 2018</Footer>
       </Layout>
     </Layout>
 )

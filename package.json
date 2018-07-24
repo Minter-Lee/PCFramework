@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "startPro": "webpack --config webpack.product.config.js ",
+    "startLoc": " NODE_ENV=loc webpack --watch --config webpack.config.js ",
     "startDev": "node webpack-dev-server.js --history-api-fallback"
   },
   "author": "MinterLee@hotmail.com",
